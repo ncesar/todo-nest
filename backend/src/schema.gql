@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: String
+  text: String!
+  checked: Boolean!
+  createdDate: String
+}
+
+type Query {
+  findAll: [Todo!]!
+}
+
+type Mutation {
+  createTodo(createTodoDto: CreateTodoDto!): Todo!
+  updateTodo(id: String!, text: String!): Todo!
+  deleteTodo(id: String!): Boolean!
+  toggleTodoCheck(toggleCheckDto: ToggleTodoCheckDto!): Boolean!
+}
+
+input CreateTodoDto {
+  id: String
+  text: String!
+  checked: Boolean!
+  createdDate: String
+}
+
+input ToggleTodoCheckDto {
+  id: String!
+  checked: Boolean!
+}
